@@ -1,5 +1,5 @@
 # Preview Image
-### Web preview: [My Portfolio Github page...](https://codeurzebs.github.io/my_portfolio)
+### Web preview: [My Portfolio Github page...](https://delightful-mud-04f7cec10.5.azurestaticapps.net/)
 
 ![Portfolio preview image1](https://github.com/codeurzebs/my_portfolio/blob/master/preview-images/1.PNG?raw=true)
 ![Portfolio preview image2](https://github.com/codeurzebs/my_portfolio/blob/master/preview-images/2.PNG?raw=true)
