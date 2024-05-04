@@ -206,7 +206,7 @@ https://github.com/codeurzebs/my_portfolio
     </div>
   </section>
 
-  <section id="calculator" class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+ <section id="calculator" class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
     <div class="container">
       <div class="row">
 
@@ -216,46 +216,29 @@ https://github.com/codeurzebs/my_portfolio
           </div>
         </div>
 
-        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center" style="background-color: white;">
           <div class="about-text">
             <h2 class="animated animated-text">
               <span class="mr-2">Mini Coin project with bootstrap<br> Enter the amount of your choice (CFA):</span>
             </h2>
-            <input type="number" id="totalAmount" min="0" placeholder="0 CFA">
-            <div id="result" style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 20px;">
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="tenThousand">Nbers of (10.000 CFA) :</label>
-                <span id="tenThousand">0</span>
+            <main style="background-color: white;">
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <label for="initialAmount">Enter init amount in:</label>
+                      <input type="number" id="initialAmount" placeholder="0 CFA">
+                    </div>
+                    <div>
+                      <label for="purchaseAmount">customer price:</label>
+                      <input type="number" id="purchaseAmount" placeholder="0 CFA">
+                    </div>
+                    <button type="button" style="background-color: rgb(70, 66, 66);" onclick="calculateChange()">customer price</button>
+                    <div id="changeResult"></div>
+                  </div>
+                </div>
               </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="fiveThousand">Nbers of (5.000 CFA) :</label>
-                <span id="fiveThousand">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="twoThousand">Nbers of (2.000 CFA) :</label>
-                <span id="twoThousand">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="oneThousand">Nbers of (1.000 CFA) :</label>
-                <span id="oneThousand">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="fiveHundred">Nbers of (500 CFA) :</label>
-                <span id="fiveHundred">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="oneHundred">Nbers of (100 CFA) :</label>
-                <span id="oneHundred">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="fifty">Nbers of (50 CFA) :</label>
-                <span id="fifty">0</span>
-              </div>
-              <div style="flex: 1 0 50%; box-sizing: border-box; padding: 10px; border: 1px solid black;">
-                <label for="twentyFive">Nbers of (25 CFA) :</label>
-                <span id="twentyFive">0</span>
-              </div>
-            </div>
+            </main>
             <p>This project is directed and governed by Eng. Tanwi ICTU for mini school projects</p>
           </div>
         </div>
