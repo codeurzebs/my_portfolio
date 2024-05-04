@@ -56,3 +56,62 @@ updateChange();
     $('.social-links a').tooltip();
 
 })(jQuery);
+
+const changeCalculator = {
+  denominations: [10000, 5000, 2000, 1000, 500, 100, 50, 25],
+  calculateChange: function() {
+    const initialAmount = parseInt(document.getElementById('initialAmount').value);
+    const purchaseAmount = parseInt(document.getElementById('purchaseAmount').value);
+    if (!isNaN(initialAmount) &&!isNaN(purchaseAmount)) {
+      const changeAmount = initialAmount - purchaseAmount;
+      if (changeAmount >= 0) {
+        const change = this.calculateChangeRecursive(changeAmount, this.denominations);
+        this.displayChangeResult(change, changeAmount);
+      } else {
+        alert("Insufficient funds. Please enter a valid purchase amount.");
+      }
+    } else {
+      alert("Please enter valid amounts.");
+    }
+  },
+  calculateChangeRecursive: function(amount, denominations, index = 0, currentChange = {}) {
+    if (amount === 0) return currentChange;
+
+    const denomination = denominations[index];
+    if (amount >= denomination) {
+      const count = Math.floor(amount / denomination);
+      const remainingAmount = amount - count * denomination;
+      const change = {...currentChange };
+      change[denomination] = count;
+      return this.calculateChangeRecursive(remainingAmount, denominations, index + 1, change) || change;
+    } else {
+      return this.calculateChangeRecursive(amount, denominations, index + 1, currentChange);
+    }
+  },
+  displayChangeResult: function(change, totalChange) {
+    let resultHTML = `
+      <h4>you must give:</h4>
+      <ul class="list-group">
+    `;
+    let totalAmount = 0;
+    for (const denomination in change) {
+      const count = change[denomination];
+      if (count > 0) {
+        const amount = denomination * count;
+        totalAmount += amount;
+        resultHTML += `
+          <li class="list-group-item">${amount} CFA So <strong>${count}</strong> times <strong>${denomination} CFA</strong></li>
+        `;
+      }
+    }
+    resultHTML += `
+      </ul>
+      <h4>Total: ${totalAmount} CFA</h4>
+    `;
+    document.getElementById('changeResult').innerHTML = resultHTML;
+  }
+};
+
+function calculateChange() {
+  changeCalculator.calculateChange();
+}
