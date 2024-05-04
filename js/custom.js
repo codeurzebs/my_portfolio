@@ -1,16 +1,7 @@
 // My coin projet JS
 function updateChange() {
   const totalAmount = parseFloat(document.getElementById('totalAmount').value) || 0;
-  const denominations = {
-    tenThousand: 10000,
-    fiveThousand: 5000,
-    twoThousand: 2000,
-    oneThousand: 1000,
-    fiveHundred: 500,
-    oneHundred: 100,
-    fifty: 50,
-    twentyFive: 25
-  };
+  denominations: [10000, 5000, 2000, 1000, 500, 100, 50, 25, 10, 5, 2, 1],
   for (const denomination in denominations) {
     const value = denominations[denomination];
     const count = Math.floor(totalAmount / value);
