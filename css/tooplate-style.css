@@ -52,6 +52,45 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
+#calculator {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#calculator label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+#calculator input[type="number"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+#calculator button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#calculator button:hover {
+  background-color: #0056b3;
+}
+
+#calculator #changeResult {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+
 h1 {
   color: #212121;
   font-size: 2.8em;
